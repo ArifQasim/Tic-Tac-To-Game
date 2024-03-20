@@ -1,8 +1,8 @@
 @font-face {
-  font-family: "Outline";
+  font-family: "Righteous";
   font-style: normal;
   font-weight: normal;
-  src: local("Outline"), url("assets/Outline.woff") format("woff");
+  src: local("Righteous"), url("assets/Outline.woff") format("woff");
 }
 
 * {
@@ -17,13 +17,13 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-family: "Outline", sans-serif;
+  font-family: "Righteous", sans-serif;
   height: 100vh;
   background: radial-gradient(circle, #6b0f9c, #000000);
 }
 
 .winner-msg {
-  height: 80vmin;
+  height: 50%;
   width: 55%;
   display: flex;
   flex-direction: column;
@@ -42,9 +42,9 @@ body {
 
 .winner-msg #msg {
   color: rgb(255, 255, 255);
-  font-size: 60px;
+  font-size: 3.8vw;
   font-weight: 400;
-  padding: 0 4rem;
+  padding: 0 3rem;
 }
 
 @keyframes bounceIn {
@@ -66,7 +66,7 @@ body {
   }
 }
 
-#game-window {
+.game-window {
   margin: 1rem 0;
   padding: 0.5rem 1.5rem;
   background: rgba(144, 19, 254, 0.25);
@@ -74,22 +74,25 @@ body {
   backdrop-filter: blur(4.5px);
   -webkit-backdrop-filter: blur(4.5px);
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-#game-window #title {
-  margin: 1rem 0;
-  font-size: 6rem;
+.game-window #title {
+  margin: 1.2rem 0;
+  font-size: 3.5rem;
   font-weight: 500;
   color: #f5f5dc;
-  padding-top: 20px;
 }
-#game-window .game-container {
+.game-window .game-container {
   height: 65vmin;
   width: 60vmin;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#game-window .game-container .game {
+.game-window .game-container .game {
   height: 60vmin;
   display: flex;
   flex-wrap: wrap;
@@ -105,7 +108,7 @@ body {
   border: none;
   border-radius: 2rem;
   cursor: pointer;
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 600;
   background-color: transparent;
   color: white;
@@ -126,13 +129,13 @@ body {
   justify-content: space-around;
   align-items: center;
   color: #f5f5dc;
-  font-size: 2.5rem;
+  font-size: 2rem;
+  gap: 1rem;
 }
 
 .game-footer span {
   opacity: 0.5;
-  font-family: "Outline", sans-serif;
-  font-size: 60px;
+  font-family: "Righteous", sans-serif;
 }
 
 #reset-btn,
@@ -143,8 +146,8 @@ body {
   font-weight: 600;
   border-radius: 0.5rem;
   margin: 2rem 0;
-  background-color: black;
-  color: white;
+  background-color: rgb(235, 163, 245);
+  color: #6b0f9c;
 }
 
 .hide {
@@ -166,10 +169,8 @@ body {
   position: absolute;
   display: block;
   list-style: none;
-  width: 20px;
-  height: 20px;
-  color: white;
-  font-size: larger;
+  color: rgb(235, 191, 248);
+  font-size: 2.5rem;
   animation: animate 25s linear infinite;
   bottom: -150px;
 }

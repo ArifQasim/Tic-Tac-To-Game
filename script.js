@@ -1,9 +1,8 @@
 var root = document.documentElement;
-
 let boxes = document.querySelectorAll(".box");
 let msgContainer = document.querySelector(".winner-msg");
 let msg = document.querySelector("#msg");
-let hideGame = document.querySelector("#game-window");
+let hideGame = document.querySelector(".game-window");
 let resetGame = document.querySelector("#reset-btn");
 let startGame = document.querySelector("#start-btn");
 
@@ -30,16 +29,13 @@ startGame.addEventListener("click", () => {
   msgContainer.classList.add("hide");
   hideGame.classList.remove("hide");
 
-  //Temporary solution
-  location.reload();
 });
 resetGame.addEventListener("click", () => {
   for (box of boxes) {
     box.innerText = "";
     box.disabled = false;
   }
-  //Temporary solution
-  location.reload();
+
 });
 
 boxes.forEach((box) => {
@@ -125,9 +121,9 @@ function removeAtt(_boxes) {
 function playerTurnVisual(_turnO) {
   if (_turnO) {
     document.querySelector(".playerNameO").style.opacity = 1;
-    document.querySelector(".playerNameX").style.opacity = 0.5;
+    document.querySelector(".playerNameX").style.opacity = 0.1;
   } else {
     document.querySelector(".playerNameX").style.opacity = 1;
-    document.querySelector(".playerNameO").style.opacity = 0.5;
+    document.querySelector(".playerNameO").style.opacity = 0.1;
   }
 }
