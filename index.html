@@ -3,24 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TIC TAC TO </title>
+    <title>TIC TAC TOE</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Signika+Negative:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Signika+Negative:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <video autoplay muted loop id="bg-video">
-      <source src="assets/purple.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    
+    <!-- Background -->
+    <ul class="circles">
+      <li>O</li>
+      <li>X</li>
+      <li>O</li>
+      <li>X</li>
+      <li>O</li>
+      <li>X</li>
+      <li>O</li>
+      <li>X</li>
+      <li>O</li>
+      <li>X</li>
+    </ul>
+
     <div class="winner-msg hide">
-        <h2 id="msg"></h2>
-        <button id="start-btn">Start New Game</button>
+      <h2 id="msg"></h2>
+      <button id="start-btn">Start New Game</button>
     </div>
     <main id="game-window">
-        <h2 id="title">TIC TAC  <span>GAME</span></h2>
+      <h2 id="title">TIC TAC TOE</h2>
       <div class="game-container">
         <div class="game">
           <button class="box"></button>
@@ -34,8 +46,11 @@
           <button class="box"></button>
         </div>
       </div>
-      <button id="reset-btn">Reset Game</button>
-   
+      <div class="game-footer">
+        <span class="playerNameO">Player O</span>
+        <button id="reset-btn">Reset Game</button>
+        <span class="playerNameX">Player X</span>
+      </div>
     </main>
     <script src="script.js"></script>
   </body>
